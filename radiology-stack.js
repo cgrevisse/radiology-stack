@@ -84,7 +84,7 @@
         connectedCallback() {
             this.shadowRoot.querySelector('li').classList.add('active');
 
-            this.shadowRoot.addEventListener('wheel', this.handleWheelEvent);
+            this.shadowRoot.querySelector('ul.image-stack').addEventListener('wheel', this.handleWheelEvent, { passive: false});
     
             const toggleButton = this.shadowRoot.querySelector('.toggle');
             toggleButton.addEventListener('click', this.toggleDisplay, false);
